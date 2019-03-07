@@ -3,7 +3,7 @@
 <head>
     <meta charset="utf-8"/>
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Charter Indexing Website</title>
+    <title>Calculator</title>
 
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
@@ -20,6 +20,97 @@
             crossorigin="anonymous"></script>
 </head>
 <body>
-    <h1>This is an other heading</h1>
+<h1>Calculator of ICT</h1>
+
+<div class="container-fluid">
+    <form action="/action_page.php">
+
+        <div class="form-group">
+            <label for="equation">Equation:</label>
+            <input type="text" class="form-control" id="equation" name="eq">
+        </div>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">1</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">2</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">3</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">+</button>
+            </div>
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">4</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">5</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">6</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">-</button>
+            </div>
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">7</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">8</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">9</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">*</button>
+            </div>
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-dark btn-block">0</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">(</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">)</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">/</button>
+            </div>
+        </div>
+        <br>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">sin</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">cos</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">log</button>
+            </div>
+            <div class="col-md-3">
+                <button type="button" class="btn btn-info btn-block">^</button>
+            </div>
+        </div>
+        <div class="row ">
+            <div class="col-md-3">
+                <button type="submit" class="btn btn-primary">Submit</button>
+            </div>
+        </div>
+    </form>
+    <h1>The result is:</h1>
+    >{{ result }}
+</div>
 </body>
 </html>
