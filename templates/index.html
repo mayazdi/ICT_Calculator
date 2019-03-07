@@ -18,97 +18,158 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
             integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
             crossorigin="anonymous"></script>
+    <script type="text/javascript">
+        function minus() {
+            document.forms["virtual"]["text"].value += "-";
+        }
+
+        function plus() {
+            document.forms["virtual"]["text"].value += "+";
+        }
+
+        function pow() {
+            document.forms["virtual"]["text"].value += "^";
+        }
+
+        function mult() {
+            document.forms["virtual"]["text"].value += "*";
+        }
+
+        function div() {
+            document.forms["virtual"]["text"].value += "/";
+        }
+
+        function par_o() {
+            document.forms["virtual"]["text"].value += "(";
+        }
+
+        function par_c() {
+            document.forms["virtual"]["text"].value += ")";
+        }
+
+        function log() {
+            document.forms["virtual"]["text"].value += "log";
+        }
+
+        function sin() {
+            document.forms["virtual"]["text"].value += "sin";
+        }
+
+        function cos() {
+            document.forms["virtual"]["text"].value += "cos";
+        }
+
+        function number(param) {
+            document.forms["virtual"]["text"].value += param;
+        }
+    </script>
 </head>
+
 <body>
-<h1>Calculator of ICT</h1>
 
-<div class="container-fluid">
-    <form action="/action_page.php">
+<center><h1>Calculator of ICT</h1></center>
 
-        <div class="form-group">
-            <label for="equation">Equation:</label>
-            <input type="text" class="form-control" id="equation" name="eq">
-        </div>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">1</button>
+<div class="container">
+    <div class="jumbotron ">
+
+        <form action="/action_page.php" name="virtual">
+
+            <div class="form-group">
+
+                <div class="row">
+                    <div class="col-md-1"></div>
+                    <div class="col-md-1"><label for="equation">Equation:</label></div>
+
+                    <div class="col-md-6">
+                        <input type="text" class="form-control" id="equation" name="text">
+                    </div>
+                    <div class="col-md-2">
+
+                        <button type="submit" class="btn btn-warning btn-block">Enter</button>
+                    </div>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">2</button>
+            <div class="row ">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(1)" class="btn btn-dark btn-block" id="sbutton">1</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(2)" class="btn btn-dark btn-block">2</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(3)" class="btn btn-dark btn-block">3</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="plus()" class="btn btn-info btn-block">+</button>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">3</button>
+            <br>
+            <div class="row ">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(4)" class="btn btn-dark btn-block">4</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(5)" class="btn btn-dark btn-block">5</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(6)" class="btn btn-dark btn-block">6</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="minus()" class="btn btn-info btn-block">-</button>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">+</button>
+            <br>
+            <div class="row ">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(7)" class="btn btn-dark btn-block">7</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(8)" class="btn btn-dark btn-block">8</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(9)" class="btn btn-dark btn-block">9</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="mult()" class="btn btn-info btn-block">*</button>
+                </div>
             </div>
-        </div>
-        <br>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">4</button>
+            <br>
+            <div class="row ">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" onclick="number(0)" class="btn btn-dark btn-block">0</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="par_o()" class="btn btn-info btn-block">(</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="par_c()" class="btn btn-info btn-block">)</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="div()" class="btn btn-info btn-block">/</button>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">5</button>
+            <br>
+            <div class="row ">
+                <div class="col-md-2"></div>
+                <div class="col-md-2">
+                    <button type="button" onclick="sin()" class="btn btn-info btn-block">sin</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="cos()" class="btn btn-info btn-block">cos</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="log()" class="btn btn-info btn-block">log</button>
+                </div>
+                <div class="col-md-2">
+                    <button type="button" onclick="pow()" class="btn btn-info btn-block">^</button>
+                </div>
             </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">6</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">-</button>
-            </div>
-        </div>
-        <br>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">7</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">8</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">9</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">*</button>
-            </div>
-        </div>
-        <br>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-dark btn-block">0</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">(</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">)</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">/</button>
-            </div>
-        </div>
-        <br>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">sin</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">cos</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">log</button>
-            </div>
-            <div class="col-md-3">
-                <button type="button" class="btn btn-info btn-block">^</button>
-            </div>
-        </div>
-        <div class="row ">
-            <div class="col-md-3">
-                <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
-        </div>
-    </form>
+        </form>
+    </div>
     <h1>The result is:</h1>
     >{{ result }}
 </div>
