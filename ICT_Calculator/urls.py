@@ -19,5 +19,6 @@ import Calculator.views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', Calculator.views.default),
+    path('calculate/<str:equ>', Calculator.views.default),
+    path('calculate/', Calculator.views.default_new),
 ]

@@ -36,7 +36,7 @@
         }
 
         function div() {
-            document.forms["virtual"]["text"].value += "/";
+            document.forms["virtual"]["text"].value += "div";
         }
 
         function par_o() {
@@ -71,9 +71,8 @@
 
 <div class="container">
     <div class="jumbotron ">
-
-        <form action="/action_page.php" name="virtual">
-
+        <form name="virtual" action="/" method="post">
+            {% csrf_token %}
             <div class="form-group">
 
                 <div class="row">
@@ -171,7 +170,12 @@
         </form>
     </div>
     <h1>The result is:</h1>
-    >{{ result }}
+    {% if parsed %}
+        > {{ result }}
+    {% else %}
+        <h6 class="text-danger">> Bad Expression</h6>
+    {% endif %}
+
 </div>
 </body>
 </html>
