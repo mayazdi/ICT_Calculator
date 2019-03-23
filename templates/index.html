@@ -62,6 +62,12 @@
         function number(param) {
             document.forms["virtual"]["text"].value += param;
         }
+
+        function equal() {
+            document.forms["virtual"]["text"].value += "=";
+            var str = document.forms["virtual"]["text"].value;
+            document.getElementById("calculator").action = "/calculate/" + str.substring(0, str.length - 1);
+        }
     </script>
 </head>
 
@@ -71,7 +77,7 @@
 
 <div class="container">
     <div class="jumbotron ">
-        <form name="virtual" action="/" method="post">
+        <form name="virtual" id="calculator" action="/calculate/" method="post">
             {% csrf_token %}
             <div class="form-group">
 
@@ -83,8 +89,7 @@
                         <input type="text" class="form-control" id="equation" name="text">
                     </div>
                     <div class="col-md-2">
-
-                        <button type="submit" class="btn btn-warning btn-block">Enter</button>
+                        <button onclick="equal()" class="btn btn-warning btn-block">Enter</button>
                     </div>
                 </div>
             </div>
